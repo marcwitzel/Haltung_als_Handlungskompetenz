@@ -32,8 +32,9 @@ keywords:
   - Fachkräfte
 ---
 Marc Witzel
+
 # Haltung als Handlungskompetenz von Fachkräften in Mediatisierungsprozessen
-## Mediatisierung als gesellschaftlicher Metaprozess…
+
 ## Mediatisierung als gesellschaftlicher Metaprozess…
 
 Die Lebenswelten der Menschen sind global durch Medien geprägt. Diese scheinbar banale Feststellung verweist auf die grundsätzliche gesellschaftliche und persönliche Verwobenheit mit Medien, theoretisch unter dem Begriff ‚Mediatisierung‘ gefasst (vgl. Krotz 2012; vgl. Angela Tillmann in diesem Heft). Verknüpft mit der Entwicklung digitaler Medien gehen zwei Arten von prägenden Diskursen einher: Während eher bewahrpädagogische Diskurse um Gefahren und Risiken sich mit der Frage, wie man junge Menschen schützen kann, befassen, geht es bei den auf Emanzipation gerichteten Diskursen um demokratisierende, egalisierende und emanzipierende Wirkungen der ‚neuen Medien‘ (vgl. Jenkins 2004). Gemeinsam ist diesen Diskursen, dass sie danach fragen, was Medien mit den Menschen und insbesondere Kindern und Jugendlichen machen. Sie gehen, stark vereinfacht, davon aus, dass Medien auf Menschen wirken und dabei entweder demokratisierende oder riskante Auswirkungen haben. Ein solcher Bezug wird jedoch weder der Komplexität von Mediatisierungsprozessen gerecht, noch geraten die je individuellen Aneignungsprozesse der Subjekte in den Blick (vgl. Krotz 2017: 349f.; Kutscher/Ley/Seelmeyer 2011: 199; Witzel 2014: 49).

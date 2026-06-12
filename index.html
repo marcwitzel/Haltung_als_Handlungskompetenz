@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Haltung als Handlungskompetenz von Fachkräften in Mediatisierungsprozessen · Marc Witzel</title>
+<meta name="description" content="Autorenmanuskript (Postprint): Witzel, Marc (2018): Haltung als Handlungskompetenz von Fachkräften in Mediatisierungsprozessen. In: Forum Erziehungshilfen 24, H. 3, S. 145–148.">
+
+<meta name="citation_title" content="Haltung als Handlungskompetenz von Fachkräften in Mediatisierungsprozessen">
+<meta name="citation_author" content="Witzel, Marc">
+<meta name="citation_publication_date" content="2018">
+<meta name="citation_journal_title" content="Forum Erziehungshilfen">
+<meta name="citation_volume" content="24">
+<meta name="citation_issue" content="3">
+<meta name="citation_firstpage" content="145">
+<meta name="citation_lastpage" content="148">
+<meta name="citation_doi" content="10.3262/FOE1803145">
+<meta name="citation_language" content="de">
+
+<script>
+  // Theme vor dem ersten Paint setzen (kein Aufblitzen des falschen Schemas)
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('gelehrte-eleganz-web-theme'); } catch (e) {}
+    if (t !== 'dark' && t !== 'light') {
+      t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.dataset.theme = t;
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #FAF7F2;
+    --surface: #F1EBE1;
+    --ink: #221E1A;
+    --body: #322D26;
+    --muted: #6B655C;
+    --line: #DDD5C7;
+    --header-bg: rgba(250, 247, 242, 0.85);
+    --accent: #1F3A5F; /* Alternative Akzentfarbe (Oxblood): #6E2B2B / dunkel #CE9494 */
+    --selection: rgba(31, 58, 95, 0.18);
+    color-scheme: light;
+  }
+  :root[data-theme="dark"] {
+    --bg: #171411;
+    --surface: #211D19;
+    --ink: #ECE6DA;
+    --body: #CDC5B8;
+    --muted: #9A9182;
+    --line: #3A342C;
+    --header-bg: rgba(23, 20, 17, 0.82);
+    --accent: #9DB6DC;
+    --selection: rgba(157, 182, 220, 0.25);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    transition: background 0.25s ease, color 0.25s ease;
+  }
+  ::selection { background: var(--selection); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* Lesefortschritt */
+  .progress-bar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 2px;
+    width: 0;
+    background: var(--accent);
+    z-index: 60;
+  }
+
+  /* Kopfzeile */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--header-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .site-header-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 13px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .masthead {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    min-width: 0;
+  }
+  .masthead-journal {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .masthead-issue {
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .header-actions { display: flex; align-items: center; gap: 10px; }
+
+  .pill-button {
+    font-family: 'Inter', sans-serif;
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    padding: 7px 15px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--ink);
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .pill-button:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* Raster: ToC · Artikel */
+  .grid {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 64px 32px 0 32px;
+    display: grid;
+    grid-template-columns: 220px minmax(0, 700px);
+    gap: 64px;
+    align-items: start;
+  }
+
+  /* Sticky-Inhaltsverzeichnis */
+  .toc { position: sticky; top: 92px; padding-top: 8px; }
+  .toc summary {
+    list-style: none;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+    cursor: default;
+    pointer-events: none;
+  }
+  .toc summary::-webkit-details-marker { display: none; }
+  .toc-list { display: flex; flex-direction: column; }
+  .toc-list a {
+    display: block;
+    padding: 5px 0 5px 14px;
+    border-left: 2px solid var(--line);
+    color: var(--muted);
+    font-weight: 400;
+    font-size: 12.5px;
+    line-height: 1.45;
+    text-decoration: none;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .toc-list a:hover { color: var(--accent); }
+  .toc-list a.active {
+    border-left-color: var(--accent);
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .toc-progress {
+    margin-top: 22px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    font-size: 11px;
+    color: var(--muted);
+    font-feature-settings: 'tnum' 1;
+  }
+
+  /* Artikel */
+  .article {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-feature-settings: 'onum' 1;
+    min-width: 0;
+  }
+  .article section { scroll-margin-top: 96px; }
+
+  /* Titelblock */
+  .kicker-row {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    flex-wrap: wrap;
+    font-family: 'Inter', sans-serif;
+  }
+  .kicker {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .kicker-note {
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+  h1 {
+    margin: 20px 0 14px 0;
+    font-size: clamp(30px, 6vw, 42px);
+    line-height: 1.16;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    color: var(--ink);
+  }
+  .byline {
+    margin-top: 26px;
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .byline-author {
+    font-size: 13.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .byline-orcid {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .byline-orcid a {
+    color: var(--muted);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+  .byline-orcid a:hover { color: var(--accent); }
+  .meta-bar {
+    margin-top: 24px;
+    padding: 13px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    gap: 8px 22px;
+    flex-wrap: wrap;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    font-feature-settings: 'lnum' 1;
+  }
+  .meta-bar a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+
+  /* Zusammenfassung (skim-then-dive) */
+  .abstract {
+    margin-top: 44px;
+    background: var(--surface);
+    border-top: 2px solid var(--accent);
+    padding: 26px 32px 28px 32px;
+  }
+  .box-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  .abstract p {
+    margin: 0;
+    font-size: 16.5px;
+    line-height: 1.6;
+    color: var(--body);
+    hyphens: auto;
+  }
+  .keywords {
+    margin-top: 18px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .keywords strong { font-weight: 600; color: var(--ink); }
+
+  /* Fließtext */
+  .article h2 {
+    margin: 60px 0 18px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: 0.005em;
+    color: var(--ink);
+  }
+  .article p {
+    margin: 0 0 1.1em 0;
+    font-size: 19px;
+    line-height: 1.62;
+    color: var(--body);
+    hyphens: auto;
+  }
+  .article section > p:last-child { margin-bottom: 0; }
+
+  /* Pull-Quote */
+  .pull-quote { margin: 44px 0; padding: 4px 0; }
+  .pull-quote-rule {
+    width: 56px;
+    height: 2px;
+    background: var(--accent);
+    margin-bottom: 18px;
+  }
+  .pull-quote-text {
+    font-size: 26px;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+
+  /* Literatur */
+  .bibliography {
+    font-size: 15.5px;
+    line-height: 1.55;
+    color: var(--body);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .bibliography p {
+    margin: 0;
+    font-size: 15.5px;
+    line-height: 1.55;
+    padding-left: 1.6em;
+    text-indent: -1.6em;
+  }
+  .bibliography em { font-style: italic; }
+
+  /* Zitierhinweis */
+  .citation-box {
+    margin-top: 64px;
+    border: 1px solid var(--line);
+    padding: 26px 30px 28px 30px;
+  }
+  .citation-box .citation {
+    margin: 0 0 18px 0;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--body);
+  }
+  .citation-box .version-note {
+    margin: 0 0 18px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+  .citation-box pre {
+    margin: 0 0 16px 0;
+    padding: 16px 18px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    line-height: 1.6;
+    color: var(--body);
+    overflow-x: auto;
+    white-space: pre;
+  }
+
+  /* Fußzeile */
+  .site-footer {
+    max-width: 1080px;
+    margin: 88px auto 0 auto;
+    padding: 26px 32px 56px 32px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .site-footer a {
+    color: var(--muted);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+  .site-footer a:hover { color: var(--accent); }
+
+  /* Mobil: einspaltig, ToC einklappbar */
+  @media (max-width: 920px) {
+    .grid { display: block; padding-top: 36px; }
+    .toc {
+      position: static;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      margin-bottom: 24px;
+    }
+    .toc summary {
+      pointer-events: auto;
+      cursor: pointer;
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .toc summary::after { content: '+'; font-size: 13px; letter-spacing: 0; }
+    .toc details[open] summary { margin-bottom: 14px; }
+    .toc details[open] summary::after { content: '−'; }
+    .abstract { padding: 22px 22px 24px 22px; }
+    .citation-box { padding: 22px 20px 24px 20px; }
+  }
+
+  /* Druck */
+  @media print {
+    :root, :root[data-theme="dark"] {
+      --bg: #FFFFFF;
+      --surface: #F4F1EA;
+      --ink: #1A1A1A;
+      --body: #26221E;
+      --muted: #5A554C;
+      --line: #C9C2B6;
+      --header-bg: #FFFFFF;
+      --accent: #1F3A5F;
+      color-scheme: light;
+    }
+    @page { margin: 20mm; }
+    [data-noprint] { display: none !important; }
+    .grid { display: block; padding-top: 24px; }
+    .article { max-width: 100%; }
+    .site-footer { margin-top: 48px; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Haltung als Handlungskompetenz von Fachkräften in Mediatisierungsprozessen",
+  "author": {
+    "@type": "Person",
+    "givenName": "Marc",
+    "familyName": "Witzel",
+    "sameAs": "https://orcid.org/0000-0002-5976-6647"
+  },
+  "datePublished": "2018",
+  "inLanguage": "de",
+  "keywords": "Haltung, Handlungskompetenz, Mediatisierung, Fachkräfte",
+  "pagination": "145-148",
+  "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.3262/FOE1803145" },
+  "sameAs": "https://doi.org/10.3262/FOE1803145",
+  "isPartOf": {
+    "@type": "PublicationIssue",
+    "issueNumber": "3",
+    "datePublished": "2018",
+    "isPartOf": {
+      "@type": "PublicationVolume",
+      "volumeNumber": "24",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Forum Erziehungshilfen",
+        "publisher": { "@type": "Organization", "name": "Beltz Juventa" }
+      }
+    }
+  },
+  "version": "Autorenmanuskript / Postprint, ohne Verlagssatz"
+}
+</script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar" data-noprint></div>
+
+<header class="site-header" data-noprint>
+  <div class="site-header-inner">
+    <div class="masthead">
+      <span class="masthead-journal">Forum Erziehungshilfen</span>
+      <span class="masthead-issue">Band 24 · Heft 3 · 2018</span>
+    </div>
+    <div class="header-actions">
+      <button class="pill-button" id="printButton" type="button">Drucken / PDF</button>
+      <button class="pill-button" id="themeToggle" type="button" aria-label="Farbschema umschalten">Dunkelmodus</button>
+    </div>
+  </div>
+</header>
+
+<div class="grid">
+
+  <nav class="toc" aria-label="Inhalt" data-noprint>
+    <details id="tocDetails">
+      <summary>Inhalt</summary>
+      <div class="toc-list" id="tocList">
+        <a href="#zusammenfassung" class="active">Zusammenfassung</a>
+        <a href="#metaprozess">Mediatisierung als gesellschaftlicher Metaprozess…</a>
+        <a href="#herausforderung">…und als konkrete Herausforderung einer sozialpädagogischen Praxis</a>
+        <a href="#kontexte">Mediatisierungsprozesse in sozialpädagogischen Kontexten</a>
+        <a href="#medieninkompetenz">Medien(in)kompetenz</a>
+        <a href="#anforderungen">Anforderungen an das sozialpädagogische Handeln der Fachkräfte</a>
+        <a href="#literatur">Literatur</a>
+        <a href="#zitierhinweis">Zitierhinweis</a>
+      </div>
+    </details>
+    <div class="toc-progress"><span id="progressPct">0&nbsp;%</span> gelesen · ≈ 9 Min.</div>
+  </nav>
+
+  <article class="article" lang="de">
+
+    <!-- Titelblock -->
+    <div>
+      <div class="kicker-row">
+        <span class="kicker">Aufsatz</span>
+        <span class="kicker-note">Autorenmanuskript / Postprint, ohne Verlagssatz</span>
+      </div>
+      <h1>Haltung als Handlungskompetenz von Fachkräften in Mediatisierungsprozessen</h1>
+      <div class="byline">
+        <span class="byline-author">Marc Witzel</span>
+        <span class="byline-orcid"><a href="https://orcid.org/0000-0002-5976-6647" rel="author">ORCID 0000-0002-5976-6647</a></span>
+      </div>
+      <div class="meta-bar">
+        <span>Erstveröffentlichung 2018 · Beltz Juventa, Weinheim</span>
+        <span>Band 24, Heft 3, S. 145–148</span>
+        <span>DOI <a href="https://doi.org/10.3262/FOE1803145">10.3262/FOE1803145</a></span>
+      </div>
+    </div>
+
+    <!-- Zusammenfassung (skim-then-dive) -->
+    <section id="zusammenfassung" class="abstract">
+      <div class="box-label">Zusammenfassung</div>
+      <p>Mediatisierung prägt als gesellschaftlicher Metaprozess auch die Handlungsfelder der Sozialpädagogik. Der Beitrag argumentiert, dass gängige Konzepte von Medienkompetenz das Medienhandeln junger Menschen in wünschenswertes und weniger wünschenswertes unterteilen und damit zwangsläufig zu einer normativen Bewertung führen, die die Subjektivität der Adressat_innen gefährden kann. Dem wird Haltung als Handlungskompetenz der Fachkräfte gegenübergestellt: eine professionelle Haltung, die das Medienhandeln von Kindern, Jugendlichen und ihren Eltern als Ausdruck selbstbestimmten Handelns anerkennt, sozialpädagogische Situationen stabilisiert und Aneignungsprozesse ermöglicht.</p>
+      <div class="keywords"><strong>Schlagwörter:</strong> Haltung · Handlungskompetenz · Mediatisierung · Fachkräfte</div>
+    </section>
+
+    <section id="metaprozess">
+      <h2>Mediatisierung als gesellschaftlicher Metaprozess…</h2>
+      <p>Die Lebenswelten der Menschen sind global durch Medien geprägt. Diese scheinbar banale Feststellung verweist auf die grundsätzliche gesellschaftliche und persönliche Verwobenheit mit Medien, theoretisch unter dem Begriff ‚Mediatisierung‘ gefasst (vgl. Krotz 2012; vgl. Angela Tillmann in diesem Heft). Verknüpft mit der Entwicklung digitaler Medien gehen zwei Arten von prägenden Diskursen einher: Während eher bewahrpädagogische Diskurse um Gefahren und Risiken sich mit der Frage, wie man junge Menschen schützen kann, befassen, geht es bei den auf Emanzipation gerichteten Diskursen um demokratisierende, egalisierende und emanzipierende Wirkungen der ‚neuen Medien‘ (vgl. Jenkins 2004). Gemeinsam ist diesen Diskursen, dass sie danach fragen, was Medien mit den Menschen und insbesondere Kindern und Jugendlichen machen. Sie gehen, stark vereinfacht, davon aus, dass Medien auf Menschen wirken und dabei entweder demokratisierende oder riskante Auswirkungen haben. Ein solcher Bezug wird jedoch weder der Komplexität von Mediatisierungsprozessen gerecht, noch geraten die je individuellen Aneignungsprozesse der Subjekte in den Blick (vgl. Krotz 2017: 349f.; Kutscher/Ley/Seelmeyer 2011: 199; Witzel 2014: 49).</p>
+    </section>
+
+    <section id="herausforderung">
+      <h2>…und als konkrete Herausforderung einer sozialpädagogischen Praxis</h2>
+      <p>Sozialpädagogische Handlungskontexte sind von Mediatisierungsprozessen nicht ausgeschlossen. Vielmehr werden sie in ihrem Bezug zu gesellschaftlichen Strukturen und zu gesellschaftlicher Wirklichkeit auch in sozialpädagogischen Handlungszusammenhängen relevant. Sozialpädagogik und insbesondere die Hilfen zur Erziehung stellen als Teil des gesellschaftlichen pädagogischen Angebots eine Form der Reaktion auf gescheiterte Aneignungsprozesse dar, welche das Subjekt in seiner Subjektivität, in seiner selbstbestimmten Handlungsfähigkeit gefährden (vgl. Winkler 1988: 149ff.). Es geht für sozialpädagogisches Handeln darum, die Lebensbedingungen von jungen Menschen in den erzieherischen Hilfen und anderen sozialpädagogischen Kontexten so zu gestalten, dass diese sowie deren Eltern als Subjekte durch Aneignungsprozesse zu ihrer Subjektivität gelangen können, sich als handlungsfähig erleben und über ihr Leben selbst bestimmen können (vgl. ebd.: 263ff.). Dabei überschreiten die Subjekte immer wieder die Grenzen der sozialpädagogischen Rahmen, machen die Neugestaltung dieser Kontexte notwendig und kehren in diese zurück, um existenzielle Sicherheit zu erfahren. Sozialpädagogisches Handeln ist somit darauf ausgerichtet, den Subjekten existenzielle Sicherheit zu vermitteln. Dabei stehen erzieherische Hilfen und andere Formen sozialpädagogischen Handelns nicht außerhalb von Gesellschaft. Vielmehr bieten sie Kindern und Jugendlichen die Gesellschaft – und damit explizit eine durch Mediatisierungsprozesse geprägte Gesellschaft – zur Aneignung an und ermöglichen so, dass Kinder und Jugendliche sich diese Welt so zu eigen machen können, dass sie in ihr als eigenständige Persönlichkeiten leben können. Diese Spezifik sozialpädagogischen Handelns, sowohl ein Ort existenzieller Sicherheit zu sein, als auch Möglichkeiten zur Aneignung der Welt zu bieten, stellt eine besondere Herausforderung dar. Die gelingende Aneignung mündet in Selbstbestimmung und Handlungsfähigkeit der Subjekte, zugleich endet damit das sozialpädagogische Handeln (vgl. ebd.: 282; Witzel 2015: 117ff.).</p>
+    </section>
+
+    <section id="kontexte">
+      <h2>Mediatisierungsprozesse in sozialpädagogischen Kontexten</h2>
+      <p>Kutscher, Ley und Seelmeyer (2011) begründen theoretisch-systematisch das Verhältnis von Subjekt und Technik zueinander und weisen auf die Notwendigkeit von Aneignungsprozessen in diesem Verhältnis hin. In Medien wird mittels Techniken eine spezifische Struktur eingelagert, welche deren Nutzung vorstrukturiert. Diese Vorstrukturierung ist dennoch auf einen Aneignungsprozess angewiesen, der sich als „Gestaltungszwang“ (ebd.: 197) einerseits und „Aneignungsspielraum“ (ebd.: 196) andererseits darstellt. Diese Aneignungsprozesse werden beeinflusst von habitualisierten Zugangsweisen, sozio-ökonomischer Einbindung und Nutzungszielen. Medien können anders genutzt werden als ursprünglich intendiert oder es können neue Handlungsformen aus den Aneignungsprozessen resultieren (vgl. ebd.: 197). Der soziale Kontext und strukturelle Rahmen wird durch die organisationalen Erbringungskontexte sozialer Dienstleistungen ebenso wie die jeweiligen Ressourcen, die im Sinne von Arbeitskulturen, Organisationsstrukturen und sozialen Bezügen die Aneignungsprozesse beeinflussen, gebildet und beeinflusst ebenfalls die Aneignungsprozesse (vgl. ebd.: 196). Dabei ist nicht nur die Frage danach zu stellen, wie Aneignungsprozesse von jungen Menschen und ihren Eltern verlaufen, denn deren Aneignungsprozessen geht ein jeweils eigener Aneignungsprozess der Professionellen voraus. Auch diese müssen sich Medien und den Umgang mit diesen aneignen, um im Rahmen einer von Mediatisierungsprozessen geprägten Jugendhilfe handlungsfähig zu sein.</p>
+    </section>
+
+    <section id="medieninkompetenz">
+      <h2>Medien(in)kompetenz</h2>
+      <p>Als ein wesentlicher Baustein für die notwendige Handlungsfähigkeit im Kontext von Mediatisierungsprozessen gilt Medienkompetenz. Was man können muss und was eine_n medienkompetente_n Akteur_in auszeichnet, bleibt dabei allerdings unkonkret. Zwar gibt es vielfältige Versuche Medienkompetenz zu bestimmen: Zum einen werden Kompetenzen vorab gesetzt, was zu Standardisierungen führt und weitere (mögliche) Kompetenzen ausschließt. Demgegenüber steht der Versuch, die Kompetenzen in den vielfältigen Handlungs- und Nutzungsweisen von Medien in den Blick zu nehmen. Werden die Kompetenzen im ersten Modell noch gesetzt, so werden sie im zweiten Modell in der Rekonstruktion des jeweiligen Medienhandelns gesucht (vgl. Sutter 2010: 172ff.). So zielen Programme zur Ausbildung von Medienkompetenz oftmals auf die Steigerung bestimmter Kompetenzen und das Erlernen elementarer Umgangsweisen mit Medien (vgl. Klein et al. 2009: 58ff.; Krotz 2007: 281). Daneben existieren Ansätze, die an den Lebenswelten der jungen Menschen anknüpfen und deren jeweilige Perspektiven und Ressourcen aufzugreifen versuchen (vgl. Klein et al. 2009: 58ff.). Allerdings orientieren sich auch diese Ansätze daran, was für die Akteur_innen nützliche und ausbaufähige Kompetenzen und Ressourcen sein können. Die Konzentration auf Kompetenzen und Ressourcen differenziert dabei Medienhandeln in ein wünschenswertes und ein weniger wünschenswertes (vgl. Witzel 2012). Eine solche Differenzierung fragt mit Blick auf die Fachkräfte in den Hilfen zur Erziehung danach, über welche Kompetenzen diese verfügen müssen, um Kinder und Jugendliche zu wünschenswertem Medienhandeln zu erziehen und weniger wünschenswertes Medienhandeln zu unterbinden. Was dabei das konkret wünschenswerte Medienhandeln ausmacht, ist jeweils eine Frage von Aushandlungsprozessen. So kann die intensive Kommunikation mit Messenger-Diensten (bspw. WhatsApp) eine hohe Kompetenz im Hinblick auf die soziale Integration in die Peer-Group darstellen, die jedoch in schulischen Kontexten nicht als Kompetenz betrachtet wird. Die Frage nach Kompetenzen beinhaltet also immer auch die Möglichkeit inkompetenten Handelns und führt damit zwingend zu einer normativen Bewertung des Handelns.</p>
+      <p>Insbesondere die regelmäßig heraufbeschworenen Risiken digitaler Medien und der damit einhergehende Sanktionierungsdiskurs machen deutlich, welche reglementierende und bevormundende Wirkung diese Diskurse entfalten (vgl. Klein 2009 &amp; 2010). Geht es für die Subjekte in ihrem Medienhandeln doch jeweils um „einen Umgang mit neuen Technologien […], welcher der Sicherung der eigenen gesellschaftlichen Position dient“ (Witzel 2012: 89), kann eine solche reglementierende und bevormundende Wirkung sich in den Lebenswelten der Subjekte gerade als ein Angriff auf deren Subjektivität erweisen. Wo Medienhandeln unterbunden wird, welches die Subjekte zur Aneignung der Welt benötigen, oder Medienhandeln gefordert wird, welches die Subjekte in ihren Aneignungsprozessen scheitern lässt, beschädigt dies ihre Subjektivität.</p>
+    </section>
+
+    <section id="anforderungen">
+      <h2>Anforderungen an das sozialpädagogische Handeln der Fachkräfte</h2>
+      <p>Der eigenständigen Aneignung durch das Subjekt und die Herausforderung für die Fachkräfte „auf die Äußerungen des betroffenen Subjekts hören“ (Winkler 1988: 276) zu müssen, um die Aneignung zu ermöglichen, verweist darauf, dass innerhalb sozialpädagogischer Handlungsfelder standardisierte Formen der Kompetenzvermittlung und insbesondere bewahrpädagogische Vorstellungen diesem entgegenstehen (vgl. Hoffmann 2008). Vielmehr gilt es, die individuellen und ‚leisen‘ Äußerungen junger Menschen als selbstbestimmtes Handeln wahrzunehmen und durch individuell darauf reagierendes fachliches Handeln die jeweilige Subjektivität zu stärken.</p>
+
+      <div class="pull-quote" aria-hidden="true">
+        <div class="pull-quote-rule"></div>
+        <div class="pull-quote-text">„Vielmehr zeichnet den Professionellen eine Haltung aus, die dem Gegenüber die Möglichkeit bietet sich an ihr abzuarbeiten.“</div>
+      </div>
+
+      <p>Aufgabe der Fachkräfte ist es dem Subjekt „mittels der gesellschaftlich verfügbaren ‚Materialien‘ – also mit den gesellschaftlichen Gegebenheiten, Handlungsweisen und perspektivischen Angeboten ‚realistische‘ Lebensbedingungen [zu] schaffen“ (Winkler 1988: 276). Zu diesen realistischen Lebensbedingungen sind zweifelsfrei auch Medien zu zählen. Auch in den Lebenswelten der Fachkräfte sind Medien in der Regel ganz selbstverständlich vorhanden und werden genutzt. Gerade mit der Notwendigkeit, jeweils im Einzelfall in den Blick zu nehmen, warum junge Menschen genauso mit Medien handeln, wie sie es tun, kann man nicht davon ausgehen, dass Fachkräfte dieses Handeln aus ihrem eigenen (auch fachlichen) Alltag heraus bewerten können. Ähnlich wie für andere Phänomene in den Lebenswelten der Subjekte sind Fachkräfte nicht explizite Expert_innen für das Medienhandeln der jungen Menschen und ihrer Familien. Vielmehr zeichnet den Professionellen eine Haltung aus, die dem Gegenüber die Möglichkeit bietet sich an ihr abzuarbeiten (vgl. Winkler 2011: 26). Die Haltung der Fachkraft ist dabei Teil des sozialpädagogischen Settings, geprägt durch Normen, Werte und Strukturen der Gesellschaft. Diese gehen in Aneignungsprozessen in die Haltungen der Fachkräfte ein. Haltungen stabilisieren dann sozialpädagogische Situationen, indem sie „die unbedingte Beständigkeit des Anderen“ (ebd.: 31f.) geltend machen. Dem Gegenüber wird unter allen Bedingungen des Leidens und der beschädigten Subjektivität durch die Haltung Anerkennung seiner eigenen Subjektivität ermöglicht, indem er als Subjekt akzeptiert wird. Sein Handeln führt, unabhängig von der persönlichen und auch von einer objektiven Bewertung, nicht zur Ablehnung des Subjekts selbst. Das Medienhandeln junger Menschen wird so gerade nicht als unerwünscht qualifiziert, sondern in seiner lebensweltlichen Bedeutung als Ausdruck selbstbestimmten Handelns betrachtet. Haltung wird auf diese Weise zu einem Element in der Gestaltung des sozialpädagogischen Ortes (vgl. ebd.). Stremmer (2017) verdeutlicht, dass Haltungen nicht in starren und klaren Verhaltensweisen münden müssen, sondern vielmehr situativ ganz unterschiedlichen Orientierungen folgen können (ebd.: 99). Haltungen sind somit zwar nicht unabhängig von Aneignungsprozessen, bieten aber ein breites Handlungsrepertoire an. Damit weisen Situationen, die durch Haltung stabilisiert werden, über bewahrpädagogische Vorstellungen hinaus, welche „richtiges“ (Medien-)Handeln fördern und „unrichtiges“ Medienhandeln sanktionieren und unterbinden. Statt Kinder, Jugendliche und deren Eltern vor den Risiken (digitaler) Medien zu schützen oder sie zu bestimmten Nutzungsweisen zu nötigen, kann ihr jeweiliges Handeln zur Einnahme spezifischer Haltungen führen, die das Handeln der jungen Menschen als Ausdruck ihrer Subjektivität betrachten. Auf diese Weise wird es den jungen Menschen und ihren Eltern ermöglicht, sich an den Haltungen der Fachkräfte abzuarbeiten, ohne Gefahr zu laufen ihre Subjektivität zu verlieren. Haltungen bieten die Möglichkeit gemeinsam in stabilen Situationen in Interaktion miteinander zu kommen und Aneignung zu ermöglichen. Dafür ist Wissen über Medien und Mediatisierungsprozesse ebenso wichtig wie solches über individuelle Nutzungsweisen und eine reflektierte eigene Positionierung demgegenüber. Nur daraus kann eine Haltung erwachsen, die sich nicht als borniert oder gar zynisch gegenüber den Kindern, Jugendlichen und deren Eltern erweist.</p>
+    </section>
+
+    <section id="literatur">
+      <h2>Literatur</h2>
+      <div class="bibliography">
+        <p>Hoffmann, B. (2008): Bewahrpädagogik. In: Sander, U./Gross, F./Hugger, K.-U. (Hrsg.): <em>Handbuch Medienpädagogik.</em> S. 42-50, Wiesbaden: VS Verlag für Sozialwissenschaften.</p>
+        <p>Jenkins, H. (2004): The Myths Of Growing Up Online, MIT. <em>Technology Review.</em> Zugriff am 14.02.2012. Verfügbar unter http://www.technologyreview.com/biomedicine/13773/page2/</p>
+        <p>Klein, A. (2009): Die Wiederentdeckung der Moralpanik – „Sexuelle Verwahrlosung“ und die „neue Unterschicht“. In: <em>Soziale Passagen,</em> 1 (1), S. 23-34.</p>
+        <p>Klein, A. (2010): Jugend, Medien und Pornographie. In: Schetsche, M./Berenike-Schmidt, R. (Hrsg.): <em>Sexuelle Verwahrlosung. Empirische Befunde – Gesellschaftliche Diskurse – Sozialethische Reflexionen.</em> 1. Aufl., S. 167-183, VS Verlag für Sozialwissenschaften.</p>
+        <p>Klein, A./Kutscher, N./Lojewski, J./Schäfer, M. (2009): <em>Medienkompetenzförderung für Kinder und Jugendliche in benachteiligten Lebenslagen. Konzept zur inhaltlichen, didaktischen und strukturellen Ausrichtung der medienpädagogischen Praxis in der Kinder- und Jugendarbeit</em> (LfM-Dokumentation, Bd. 36). Düsseldorf.</p>
+        <p>Krotz, F. (2007): <em>Mediatisierung. Fallstudien zum Wandel der Kommunikation.</em> Wiesbaden: VS Verlag für Sozialwissenschaften.</p>
+        <p>Krotz, F. (2012): Von der Entdeckung der Zentralperspektive zur Augmented Reality: Wie Mediatisierung funktioniert. In: Krotz, F./Hepp, A. (Hrsg.): <em>Mediatisierte Welten.</em> S. 27-55, Wiesbaden: VS Verlag für Sozialwissenschaften.</p>
+        <p>Krotz, F. (2017): Pfade der Mediatisierung. Bedingungsgeflechte für die Transformationen von Medien, Alltag, Kultur und Gesellschaft. In: Krotz, F./Despotovic, C./Kruse, M.-M. (Hrsg.): <em>Mediatisierung als Metaprozess. Transformationen, Formen der Entwicklung und die Generierung von Neuem.</em> Medien, Kultur, Kommunikation, S. 347-364, Wiesbaden: Springer VS.</p>
+        <p>Kutscher, N./Ley, T./Seelmeyer, U. (2011): Subjekt – Technik – Kontext. Zur Aneignung von Informations- und Kommunikationstechnologien in der Sozialen Arbeit. In: Arbeitskreis „Jugendhilfe im Wandel“ (Hrsg.): <em>Jugendhilfeforschung. Kontroversen – Transformationen – Adressierungen.</em> S. 187-214, Wiesbaden: VS Verlag für Sozialwissenschaften.</p>
+        <p>Stremmer, T. (2017): Zum Zusammenhang von Haltung und Beteiligung. In: Equit, C./Flösser, G./Witzel, M. (Hrsg.): <em>Beteiligung und Beschwerde in der Heimerziehung. Grundlagen, Anforderungen und Perspektiven.</em> Reihe Grundsatzfragen, Bd. 54, S. 93-110, Frankfurt am Main: Internationale Gesellschaft für Erzieherische Hilfen.</p>
+        <p>Sutter, T. (2010): Medienkompetenz – einige Anmerkungen zum Kompetenzbegriff. In: Sutter, T. (Hrsg.): <em>Medienanalyse und Medienkritik,</em> S. 167-180, Wiesbaden: VS Verlag für Sozialwissenschaften.</p>
+        <p>Winkler, M. (1988): <em>Eine Theorie der Sozialpädagogik.</em> Stuttgart: Klett-Cotta.</p>
+        <p>Winkler, M. (2011): Haltung bewahren – sozialpädagogisches Handeln unter Unsicherheitsbedingungen. In: Düring, D./Krause, H.-U. (Hrsg.): <em>Pädagogische Kunst und professionelle Haltungen.</em> Grundsatzfragen, Internationale Gesellschaft für Erzieherische Hilfen, Bd. 48, S. 14-34, Frankfurt am Main.</p>
+        <p>Witzel, M. (2012): Medienhandeln, Digitale Ungleichheit und Distinktion. In: <em>Medien + Erziehung,</em> 56 (6), S. 81-92.</p>
+        <p>Witzel, M. (2014): Mediatisierung als Perspektive Sozialer Arbeit. In: <em>Sozial Extra,</em> 38 (4), S. 47-50.</p>
+        <p>Witzel, M. (2015): Digitale Medien in der stationären Erziehungshilfe zwischen lebensweltlichen und institutionellen Kontexten. In: Kutscher, N./Ley, T./Seelmeyer, U. (Hrsg.): <em>Mediatisierung (in) der Sozialen Arbeit.</em> Grundlagen der sozialen Arbeit, Bd. 38, 1. Aufl., S. 115-129, Baltmannsweiler: Schneider Hohengehren.</p>
+      </div>
+    </section>
+
+    <section id="zitierhinweis" class="citation-box">
+      <div class="box-label">Zitierhinweis</div>
+      <p class="citation">Witzel, Marc (2018): Haltung als Handlungskompetenz von Fachkräften in Mediatisierungsprozessen. In: <em>Forum Erziehungshilfen</em> 24, H. 3, S. 145–148. DOI: 10.3262/FOE1803145.</p>
+      <p class="version-note">Diese Fassung ist das Autorenmanuskript (Postprint) ohne Verlagssatz; die Seitenzahlen der Verlagsfassung sind oben angegeben.</p>
+      <pre id="bibtex">@article{witzel2018haltung,
+  author    = {Witzel, Marc},
+  title     = {Haltung als Handlungskompetenz von Fachkräften
+               in Mediatisierungsprozessen},
+  journal   = {Forum Erziehungshilfen},
+  year      = {2018},
+  volume    = {24},
+  number    = {3},
+  pages     = {145--148},
+  publisher = {Beltz Juventa},
+  doi       = {10.3262/FOE1803145}
+}</pre>
+      <div data-noprint>
+        <button class="pill-button" id="copyButton" type="button">BibTeX kopieren</button>
+      </div>
+    </section>
+
+  </article>
+
+</div>
+
+<footer class="site-footer">
+  <span>© 2018 Marc Witzel · Erstveröffentlichung: Beltz Juventa, Weinheim</span>
+  <span data-noprint>
+    <a href="#zusammenfassung" id="goToTop">Nach oben</a>
+  </span>
+</footer>
+
+<script>
+  (function () {
+    var THEME_KEY = 'gelehrte-eleganz-web-theme';
+    var root = document.documentElement;
+
+    // Farbschema
+    var themeToggle = document.getElementById('themeToggle');
+    function syncThemeLabel() {
+      themeToggle.textContent = root.dataset.theme === 'dark' ? 'Hellmodus' : 'Dunkelmodus';
+    }
+    syncThemeLabel();
+    themeToggle.addEventListener('click', function () {
+      var next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      root.dataset.theme = next;
+      try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
+      syncThemeLabel();
+    });
+
+    // Drucken
+    document.getElementById('printButton').addEventListener('click', function () {
+      window.print();
+    });
+
+    // BibTeX kopieren
+    var copyButton = document.getElementById('copyButton');
+    var copyTimer = null;
+    copyButton.addEventListener('click', function () {
+      var done = function () {
+        copyButton.textContent = 'Kopiert ✓';
+        clearTimeout(copyTimer);
+        copyTimer = setTimeout(function () { copyButton.textContent = 'BibTeX kopieren'; }, 2000);
+      };
+      var text = document.getElementById('bibtex').textContent;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, done);
+      } else { done(); }
+    });
+
+    // „Nach oben"
+    document.getElementById('goToTop').addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ToC: mobil einklappbar, ab Desktop-Breite immer offen
+    var tocDetails = document.getElementById('tocDetails');
+    var mq = window.matchMedia('(min-width: 921px)');
+    function syncToc(open) { tocDetails.open = open; }
+    syncToc(mq.matches);
+    if (mq.addEventListener) {
+      mq.addEventListener('change', function (e) { syncToc(e.matches); });
+    }
+
+    // Lesefortschritt + Scrollspy
+    var bar = document.getElementById('progressBar');
+    var pct = document.getElementById('progressPct');
+    var links = Array.prototype.slice.call(document.querySelectorAll('#tocList a'));
+    var sections = links.map(function (a) {
+      return document.getElementById(a.getAttribute('href').slice(1));
+    });
+    var activeLink = null;
+
+    function onScroll() {
+      var doc = document.documentElement;
+      var max = doc.scrollHeight - window.innerHeight;
+      var p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      bar.style.width = (p * 100).toFixed(1) + '%';
+      pct.textContent = Math.round(p * 100) + ' %';
+
+      var current = links[0];
+      for (var i = 0; i < sections.length; i++) {
+        if (sections[i] && sections[i].getBoundingClientRect().top <= 170) current = links[i];
+      }
+      if (current !== activeLink) {
+        if (activeLink) activeLink.classList.remove('active');
+        current.classList.add('active');
+        activeLink = current;
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
+
+</body>
+</html>

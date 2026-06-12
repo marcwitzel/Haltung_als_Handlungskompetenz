@@ -108,19 +108,17 @@
     gap: 14px;
     min-width: 0;
   }
-  .masthead-journal {
-    font-size: 11px;
+  .masthead-title {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 14px;
     font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
+    letter-spacing: 0.005em;
     color: var(--ink);
     white-space: nowrap;
-  }
-  .masthead-issue {
-    font-size: 10.5px;
-    letter-spacing: 0.08em;
-    color: var(--muted);
-    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    max-width: 520px;
   }
   .header-actions { display: flex; align-items: center; gap: 10px; }
 
@@ -273,13 +271,6 @@
     text-underline-offset: 2px;
   }
 
-  /* Zusammenfassung (skim-then-dive) */
-  .abstract {
-    margin-top: 44px;
-    background: var(--surface);
-    border-top: 2px solid var(--accent);
-    padding: 26px 32px 28px 32px;
-  }
   .box-label {
     font-family: 'Inter', sans-serif;
     font-size: 10px;
@@ -289,21 +280,6 @@
     color: var(--muted);
     margin-bottom: 14px;
   }
-  .abstract p {
-    margin: 0;
-    font-size: 16.5px;
-    line-height: 1.6;
-    color: var(--body);
-    hyphens: auto;
-  }
-  .keywords {
-    margin-top: 18px;
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
-    color: var(--muted);
-  }
-  .keywords strong { font-weight: 600; color: var(--ink); }
-
   /* Fließtext */
   .article h2 {
     margin: 60px 0 18px 0;
@@ -498,8 +474,7 @@
 <header class="site-header" data-noprint>
   <div class="site-header-inner">
     <div class="masthead">
-      <span class="masthead-journal">Forum Erziehungshilfen</span>
-      <span class="masthead-issue">Band 24 · Heft 3 · 2018</span>
+      <span class="masthead-title">Haltung als Handlungskompetenz von Fachkräften in Mediatisierungsprozessen</span>
     </div>
     <div class="header-actions">
       <button class="pill-button" id="printButton" type="button">Drucken / PDF</button>
@@ -514,8 +489,7 @@
     <details id="tocDetails">
       <summary>Inhalt</summary>
       <div class="toc-list" id="tocList">
-        <a href="#zusammenfassung" class="active">Zusammenfassung</a>
-        <a href="#metaprozess">Mediatisierung als gesellschaftlicher Metaprozess…</a>
+        <a href="#metaprozess" class="active">Mediatisierung als gesellschaftlicher Metaprozess…</a>
         <a href="#herausforderung">…und als konkrete Herausforderung einer sozialpädagogischen Praxis</a>
         <a href="#kontexte">Mediatisierungsprozesse in sozialpädagogischen Kontexten</a>
         <a href="#medieninkompetenz">Medien(in)kompetenz</a>
@@ -546,13 +520,6 @@
         <span>DOI <a href="https://doi.org/10.3262/FOE1803145">10.3262/FOE1803145</a></span>
       </div>
     </div>
-
-    <!-- Zusammenfassung (skim-then-dive) -->
-    <section id="zusammenfassung" class="abstract">
-      <div class="box-label">Zusammenfassung</div>
-      <p>Mediatisierung prägt als gesellschaftlicher Metaprozess auch die Handlungsfelder der Sozialpädagogik. Der Beitrag argumentiert, dass gängige Konzepte von Medienkompetenz das Medienhandeln junger Menschen in wünschenswertes und weniger wünschenswertes unterteilen und damit zwangsläufig zu einer normativen Bewertung führen, die die Subjektivität der Adressat_innen gefährden kann. Dem wird Haltung als Handlungskompetenz der Fachkräfte gegenübergestellt: eine professionelle Haltung, die das Medienhandeln von Kindern, Jugendlichen und ihren Eltern als Ausdruck selbstbestimmten Handelns anerkennt, sozialpädagogische Situationen stabilisiert und Aneignungsprozesse ermöglicht.</p>
-      <div class="keywords"><strong>Schlagwörter:</strong> Haltung · Handlungskompetenz · Mediatisierung · Fachkräfte</div>
-    </section>
 
     <section id="metaprozess">
       <h2>Mediatisierung als gesellschaftlicher Metaprozess…</h2>
@@ -637,7 +604,7 @@
 <footer class="site-footer">
   <span>© 2018 Marc Witzel · Erstveröffentlichung: Beltz Juventa, Weinheim</span>
   <span data-noprint>
-    <a href="#zusammenfassung" id="goToTop">Nach oben</a>
+    <a href="#metaprozess" id="goToTop">Nach oben</a>
   </span>
 </footer>
 
